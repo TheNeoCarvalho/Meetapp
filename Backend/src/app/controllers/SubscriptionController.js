@@ -119,7 +119,7 @@ class SubscriptionController {
 
     await Notification.create({
       user: user.id,
-      content: `Agora você está inscrito ${title}!`,
+      content: `Agora você está inscrito no ${title}!`,
     });
 
     const { name: userSubName, email: userSubEmail } = await User.findOne({
