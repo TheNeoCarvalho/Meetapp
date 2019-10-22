@@ -41,6 +41,7 @@ export default function Notifications() {
   }
   async function handleMarkAsRead(id) {
     api.put(`notifications/${id}`);
+
     setNotifications(
       notifications.map(notification =>
         notification._id === id ? { ...notification, read: true } : notification

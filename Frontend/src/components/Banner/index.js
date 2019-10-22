@@ -21,7 +21,7 @@ export default function BannerInput() {
         path: 'dataset.file',
       });
     }
-  }, [ref.current]);
+  }, [registerField]);
 
   async function handleChange(e) {
     const data = new FormData();

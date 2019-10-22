@@ -28,7 +28,6 @@ export const Content = styled.div`
       transition: 0.2s;
       &:hover {
         opacity: 1;
-        transform: translateY(-2px);
       }
     }
   }
@@ -56,7 +55,6 @@ export const Profile = styled.div`
       font-size: 12px;
       color: #999;
       &:hover {
-        transform: scale(1.03);
         strong {
           opacity: 1;
         }

@@ -22,8 +22,8 @@ export default function SelectDate() {
 
   return (
     <DatePicker
-      selected={selected}
       onChange={d => setSelected(d)}
+      selected={selected}
       showTimeSelect
       locale={pt}
       minDate={new Date()}

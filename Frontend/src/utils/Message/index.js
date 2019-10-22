@@ -5,6 +5,6 @@ export const errorMessage = function errorMessage(e) {
   toast.error(
     !!error && error.data.error
       ? `${error.data.error}`
-      : 'Algo de errado aconteceu... Tente novamente'
+      : 'Algo de errado aconteceu... Tente novamente!'
   );
 };
