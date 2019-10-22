@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
+
 import { format, subMonths, addMonths, parseISO } from 'date-fns';
 import pt from 'date-fns/locale/pt-BR';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { errorMessage, successMessage } from '~/util/Message';
 
@@ -16,8 +18,8 @@ import {
   NoMeetappsText,
 } from './styles';
 
-import Background from '~/components/Background';
 import Header from '~/components/Header';
+import Background from '~/components/Background';
 import Meetapp from '~/components/Meetapp';
 
 export default function Dashboard() {

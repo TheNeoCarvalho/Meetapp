@@ -16,10 +16,10 @@ export const List = styled.FlatList.attrs({
 
 export const ContainerHeader = styled.View`
   display: flex;
-  flex-direction: row;
-  align-items: center;
   align-content: center;
   align-self: center;
+  align-items: center;
+  flex-direction: row;
   margin: 10px 0;
 `;
 

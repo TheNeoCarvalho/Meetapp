@@ -1,9 +1,10 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
+
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 
 import FlashMessage from 'react-native-flash-message';
-import { StatusBar } from 'react-native';
 
 import './config/ReactotronConfig';
 

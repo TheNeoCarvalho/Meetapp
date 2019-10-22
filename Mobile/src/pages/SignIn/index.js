@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Image } from 'react-native';
+
 import { useDispatch, useSelector } from 'react-redux';
 
 import logo from '~/assets/logo.png';
