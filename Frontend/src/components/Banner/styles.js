@@ -5,23 +5,23 @@ export const Container = styled.div`
   align-self: stretch;
   border-radius: 10px;
   label {
+    display: block;
+    overflow: hidden;
     width: 100%;
     max-height: 26vw;
-    cursor: pointer;
-    overflow: hidden;
-    display: block;
     margin-bottom: 10px;
-    background: rgba(0, 0, 0, 0.05);
     border-radius: 4px;
+    background: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
     &:hover {
       opacity: 0.7;
     }
     .icon-add {
-      justify-content: center;
-      z-index: 3;
-      padding: 50px 0px;
       display: flex;
+      justify-content: center;
       align-items: center;
+      padding: 50px 0px;
+      z-index: 3;
     }
     img {
       width: 100%;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { format, parseISO } from 'date-fns';
-import en from 'date-fns/locale/en-US';
+import pt from 'date-fns/locale/pt-BR';
 import {
   MdEdit,
   MdDeleteForever,
@@ -43,9 +43,13 @@ export default function Meetapp({ match }) {
           ...data,
           formattedSubscribers: data.subscribers.slice(0, showSubs),
           sumSubscribers: data.subscribers.length - showSubs,
-          formattedDate: format(parseISO(data.date), "MMMM dd ', at' H'h'", {
-            locale: en,
-          }),
+          formattedDate: format(
+            parseISO(data.date),
+            "d' de 'MMMM' às 'HH'h'mm",
+            {
+              locale: pt,
+            }
+          ),
         });
         setSubscribed(data.subscribed);
         setcountSubscribed(data.subscribers.length);
@@ -136,7 +140,7 @@ export default function Meetapp({ match }) {
                 <MdPlace />
                 <span>{meetapp.location}</span>
                 <span>
-                  By <strong>{meetapp.owner.name}</strong>
+                  criado por <strong>{meetapp.owner.name}</strong>
                 </span>
               </div>
               <div className="subscriber">

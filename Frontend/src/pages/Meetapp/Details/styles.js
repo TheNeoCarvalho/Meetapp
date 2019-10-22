@@ -84,6 +84,7 @@ export const Content = styled.div`
       display: flex;
       align-items: center;
       font-size: 16px;
+      text-transform: uppercase;
       span {
         margin-right: 30px;
       }
@@ -108,8 +109,8 @@ export const Content = styled.div`
             margin-left: 5px;
           }
           &:hover {
-            transform: scale(1.3);
-            margin: 0 10px;
+            transform: scale(1);
+
             > .subscriber-tooltip {
               visibility: visible;
             }

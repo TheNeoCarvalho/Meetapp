@@ -86,6 +86,7 @@ export const MeetappCard = styled.div`
       width: 70%;
     }
     time {
+      text-transform: uppercase;
       font-size: 12px;
     }
   }

@@ -2,12 +2,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { format, subMonths, addMonths, parseISO } from 'date-fns';
-import en from 'date-fns/locale/en-US';
+import pt from 'date-fns/locale/pt-BR';
 import {
   MdAddCircleOutline,
   MdChevronLeft,
   MdChevronRight,
-  MdSentimentDissatisfied,
 } from 'react-icons/md';
 
 import api from '~/services/api';
@@ -16,12 +15,11 @@ import history from '~/services/history';
 import { Container, NoMeetapps, MeetappCard } from './styles';
 
 export default function Dashboard() {
-
   const [meetapps, setMeetapps] = useState([]);
   const [date, setDate] = useState(new Date());
 
   const dateFormatted = useMemo(
-    () => format(date, 'yyyy MMMM', { locale: en }),
+    () => format(date, 'MMMM yyyy', { locale: pt }),
     [date]
   );
 
@@ -30,8 +28,8 @@ export default function Dashboard() {
       const response = await api.get('meetapps', { params: { date } });
       const data = response.data.map(m => ({
         ...m,
-        formattedDate: format(parseISO(m.date), "MMMM d', at' hh'h'mm", {
-          locale: en,
+        formattedDate: format(parseISO(m.date), "d' de ' MMMM' às ' hh'h'mm", {
+          locale: pt,
         }),
       }));
       setMeetapps(data);
@@ -82,8 +80,7 @@ export default function Dashboard() {
         </ul>
       ) : (
         <NoMeetapps>
-          <MdSentimentDissatisfied color="#fff" size={40} />
-          <span>Nenhum Meetapp...!</span>
+          <span>Nenhum meetapp este mês!</span>
         </NoMeetapps>
       )}
       <footer>

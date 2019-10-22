@@ -21,7 +21,6 @@ export default function BannerInput() {
         path: 'dataset.file',
       });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ref.current]);
 
   async function handleChange(e) {
@@ -40,7 +39,7 @@ export default function BannerInput() {
   return (
     <Container>
       <label htmlFor="banner">
-        {preview && <img src={preview} alt="banner_meetapp" />}
+        {preview && <img src={preview} alt="banner" />}
 
         {!preview && (
           <div className="icon-add">

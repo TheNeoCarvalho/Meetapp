@@ -18,7 +18,7 @@ import history from '~/services/history';
 import { Container } from '~/styles/FormMeetapp';
 
 export default function NewMeetapp({ match }) {
-  /* STATES */
+
   const [date, setDate] = useState();
   const [loading, setLoading] = useState(true);
   const [meetapp, setMeetapp] = useState(true);

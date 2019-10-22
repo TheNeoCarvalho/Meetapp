@@ -31,8 +31,8 @@ export default function SignIn() {
       <Form schema={schema} onSubmit={handleSubmit}>
         <Input name="email" type="email" placeholder="E-mail" />
         <Input name="password" type="password" placeholder="Senha" />
-        <button type="submit">{loading ? 'Aguarde...' : 'Login'}</button>
-        <Link to="/register">Criar Usuário</Link>
+        <button type="submit">{loading ? 'Aguarde...' : 'Entrar'}</button>
+        <Link to="/register">Criar conta</Link>
       </Form>
     </>
   );

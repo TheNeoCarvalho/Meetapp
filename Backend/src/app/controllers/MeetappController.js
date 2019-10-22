@@ -7,6 +7,8 @@ import Notification from '../schemas/Notification';
 
 class MeetappController {
   async index(req, res) {
+    const { page = 1 } = req.query;
+
     let where;
     if (req.query.where === 'just-my-meetapps') {
       where = { owner_id: req.userId };
@@ -25,6 +27,8 @@ class MeetappController {
     const meetapps = await Meetapp.findAll({
       where,
       order: [['date', 'ASC']],
+      limit: 10,
+      offset: (page - 1) * 10,
       include: [
         {
           model: File,

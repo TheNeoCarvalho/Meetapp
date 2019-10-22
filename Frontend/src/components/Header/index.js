@@ -24,7 +24,7 @@ export default function Header() {
           <Link to="/dashboard">
             <img src={Logo} alt="Logo MeetApp" />
           </Link>
-          {/* <Link to="/my-meetapps">MeetApp</Link> */}
+        
         </nav>
         <aside>
           <Notifications />
@@ -37,7 +37,7 @@ export default function Header() {
               src={
                 profile.avatar
                   ? profile.avatar.url
-                  : 'https://api.adorable.io/avatars/50/abott@adorable.png'
+                  : 'https://api.adorable.io/avatars/50/'
               }
               alt="Avatar"
             />
