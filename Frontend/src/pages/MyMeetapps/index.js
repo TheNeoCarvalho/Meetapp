@@ -2,13 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { format, parseISO } from 'date-fns';
 import pt from 'date-fns/locale/pt-BR';
-import {
-  MdAddCircleOutline,
-  MdChevronRight,
-  MdSentimentDissatisfied,
-} from 'react-icons/md';
-
-import Loader from 'react-loader-spinner';
+import { MdAddCircleOutline, MdChevronRight } from 'react-icons/md';
 
 import api from '~/services/api';
 import history from '~/services/history';
@@ -39,9 +33,7 @@ export default function MyMeetapps() {
   return (
     <Container>
       {loading ? (
-        <div className="loading">
-          <Loader type="Grid" color="#f94d6a" width={164} height={164} />
-        </div>
+        <div className="loading">Carregando ...</div>
       ) : (
         <>
           <header>
@@ -78,8 +70,7 @@ export default function MyMeetapps() {
             </ul>
           ) : (
             <NoMeetapps>
-              <MdSentimentDissatisfied color="#fff" size={40} />
-              <span>Nenhum Meetapp...</span>
+              <span>Nenhum Meetapp!</span>
             </NoMeetapps>
           )}
         </>

@@ -10,7 +10,6 @@ import {
 } from 'react-icons/md';
 import PropTypes from 'prop-types';
 
-import Loader from 'react-loader-spinner';
 import { toast } from 'react-toastify';
 import { errorMessage } from '~/utils/Message';
 
@@ -78,11 +77,11 @@ export default function Meetapp({ match }) {
       if (subscriber) {
         await api.post(`subscriptions/${id.value}`);
         setcountSubscribed(countSubscribed + 1);
-        toast.success(`You are now subscribed at ${meetapp.title}! ;)`);
+        toast.success(`Você agora estar inscrito em ${meetapp.title}!`);
       } else {
         await api.delete(`subscriptions/${id.value}`);
         setcountSubscribed(countSubscribed - 1);
-        toast.warn(`Unsubscribed from ${meetapp.title}! ;)`);
+        toast.warn(`Você cancelou sua inscrição em ${meetapp.title}!`);
       }
     } catch (e) {
       errorMessage(e);
@@ -92,9 +91,7 @@ export default function Meetapp({ match }) {
   return (
     <Container>
       {loading ? (
-        <div className="loading">
-          <Loader type="Grid" color="#f94d6a" width={164} height={164} />
-        </div>
+        <div className="loading">Carregando...</div>
       ) : (
         <>
           <header>

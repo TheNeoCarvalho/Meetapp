@@ -39,9 +39,7 @@ export default function AvatarInput() {
     <Container>
       <label htmlFor="avatar">
         <img
-          src={
-            preview || `https://api.adorable.io/avatars/50/`
-          }
+          src={preview || `https://api.adorable.io/avatars/50/`}
           alt="profile_photo"
         />
         <input

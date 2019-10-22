@@ -24,7 +24,7 @@ export default function NewMeetapp() {
           `Um erro aconteceu, tente novamente, [${response.body.error}]`
         );
       history.push('/');
-      toast.success('MeeApp criado com sucessoS');
+      toast.success('MeeApp criado com sucesso');
     } catch (e) {
       errorMessage(e);
     }

@@ -73,7 +73,7 @@ export const Content = styled.div`
   margin-bottom: 50px;
   .description {
     font-size: 18px;
-    line-height: 50px;
+    line-height: 30px;
   }
   > div {
     align-items: center;
@@ -83,7 +83,7 @@ export const Content = styled.div`
     .others-info {
       display: flex;
       align-items: center;
-      font-size: 16px;
+      font-size: 12px;
       text-transform: uppercase;
       span {
         margin-right: 30px;

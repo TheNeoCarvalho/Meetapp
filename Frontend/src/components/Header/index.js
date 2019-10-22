@@ -24,7 +24,7 @@ export default function Header() {
           <Link to="/dashboard">
             <img src={Logo} alt="Logo MeetApp" />
           </Link>
-        
+          <Link to="/my-meetapps">Meus MeetApps</Link>
         </nav>
         <aside>
           <Notifications />
@@ -42,7 +42,7 @@ export default function Header() {
               alt="Avatar"
             />
             <button type="button" onClick={handleSignOut}>
-              Logout
+              Sair
             </button>
           </Profile>
         </aside>
