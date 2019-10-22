@@ -1,7 +1,6 @@
 # Meetapp
 
 ## Backend
-### Iniciando a API
 ------------
 
 `$ git clone https://TheNeoCarvalho/meetapp-backend.git`
